@@ -9,7 +9,7 @@ const Daily = () => {
         <Sidebar />
       </div>
       <div className="w-full flex flex-col">
-        <TopNav title="Daily" />
+        <TopNav title="Returned Stock" />
       </div>
     </div>
   );

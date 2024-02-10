@@ -15,16 +15,21 @@ export default function Barchar() {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August', 'September', 'October', 'November', 'December'],
             datasets: [
                 {
-                    label: 'Present employees',
+                    label: 'Fruit and Veg',
                     backgroundColor: documentStyle.getPropertyValue('--blue-800'),
                     borderColor: documentStyle.getPropertyValue('--blue-800'),
                     data: [65, 59, 80, 81, 56, 55, 40,80, 81, 56, 55, 40]
                 },
                 {
-                    label: 'Absent Employeee',
+                    label: 'Dry Stock',
                     backgroundColor: documentStyle.getPropertyValue('#ad4577'),
                     borderColor: documentStyle.getPropertyValue('#ad4577'),
                     data: [28, 48, 40, 19, 86, 27, 90,80, 81, 56, 55, 40]
+                }, {
+                    label: 'Frozen Stock',
+                    backgroundColor: documentStyle.getPropertyValue('--blue-800'),
+                    borderColor: documentStyle.getPropertyValue('--blue-800'),
+                    data: [65, 59, 80, 81, 56, 55, 40,80, 81, 56, 55, 40]
                 }
             ]
         };

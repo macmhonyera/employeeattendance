@@ -9,7 +9,7 @@ const Attendance = () => {
         <Sidebar />
       </div>
       <div className="w-full flex flex-col">
-        <TopNav title="Attendance" />
+        <TopNav title="Received Stock" />
       </div>
     </div>
   );

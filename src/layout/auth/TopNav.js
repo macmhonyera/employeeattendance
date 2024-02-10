@@ -1,5 +1,6 @@
 import React from 'react'
 import {MdNotificationsNone} from 'react-icons/md'
+import Notifications from '../../components/Notifications'
 
 const TopNav = (props) => {
   return (
@@ -12,7 +13,7 @@ const TopNav = (props) => {
             </h1>
         </div>
         <div className='inline-flex items-center space-x-2 pr-8'>
-            <MdNotificationsNone className='w-10 h-10 text-[#993365] border-r-2'/>
+            <Notifications/>
             <div className='flex items-center space-x-2'>
                 <img src={require("../../assets/profile.jpg")}
                 className={`rounded-full w-10 h-10`}

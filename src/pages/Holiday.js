@@ -9,7 +9,7 @@ const Holiday = () => {
         <Sidebar />
       </div>
       <div className="w-full flex flex-col">
-        <TopNav title="Holiday" />
+        <TopNav title="Returned Stock" />
       </div>
     </div>
   );

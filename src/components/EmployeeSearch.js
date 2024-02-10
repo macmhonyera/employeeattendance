@@ -7,16 +7,16 @@ const EmployeeSearch = () => {
         <div>
           <input
             type="text"
-            id="employee_id"
-            placeholder="Employee Id"
+            id="product_code"
+            placeholder="Product Code"
             className="bg-gray-50 border border-gray-300 rounded-lg w-full p-2"
           />
         </div>
         <div>
           <input
             type="text"
-            id="employee_name"
-            placeholder="Employee Name"
+            id="procuct_name"
+            placeholder="Product Name"
             className="bg-gray-50 border border-gray-300 rounded-lg w-full p-2"
           />
         </div>
@@ -25,17 +25,18 @@ const EmployeeSearch = () => {
             id="designation"
             className="bg-gray-50 border border-gray-300 rounded-lg block w-full p-3"
           >
-            <option selected className="text-gray-300">Designation</option>
-            <option value="">Sales</option>
-            <option value="">Marketing</option>
-            <option value="">Web design</option>
-            <option value="">Support</option>
+            <option selected className="text-gray-300">
+              Category
+            </option>
+            <option value="">Fruit and Veg</option>
+            <option value="">Dry Stock</option>
+            <option value="">Frozen Stock</option>
           </select>
         </div>
         <div>
           <button
             type="submit"
-            className="bg-[#ad4577] border border-gray-300 rounded-lg w-full p-2 text-white font-bold text-xl"
+            className="bg-[#17486f] border border-gray-300 rounded-lg w-full p-2 text-white font-bold text-xl"
           >
             Search
           </button>

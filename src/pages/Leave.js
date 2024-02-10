@@ -9,7 +9,7 @@ const Leave = () => {
         <Sidebar />
       </div>
       <div className="w-full flex flex-col">
-        <TopNav title="Leave" />
+        <TopNav title="Suppliers" />
       </div>
     </div>
   );
