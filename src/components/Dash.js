@@ -162,52 +162,16 @@ const Dash = () => {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 border border-gray-900 rounded-md p-3 max-h-30">
-            <h1>Total Cost of Inventory</h1>
-            <div className="relative flex flex-col items-center">
-                <span class="ml-3">
-                  <p className="text-md text-black  font-bold ">$</p>
-                  <p className="text-xs text-gray-700">12000</p>
-                </span>
-              </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-2 border rounded-lg p-2">
-        <div className="p-2 drop-shadow-lg">
-          <p className="p-1 font-bold text-xl">
-            Know the weather of a city of your choice !!!
-          </p>
-          <div className="space-x-4">
-            <input
-              type="text"
-              placeholder="Enter city/town..."
-              onChange={(e) => setSearch(e.target.value)}
-              className="bg-gray-50 border border-purple-300 rounded-lg w-60 p-2"
-            />
-            <button
-              onClick={searchPressed}
-              className="bg-purple-500 border font-bold border-gray-300 rounded-lg w-40 p-2"
-            >
-              Search
-            </button>
+          <h1>Total Cost of Inventory</h1>
+          <div className="relative flex flex-col items-center">
+            <span class="ml-3">
+              <p className="text-md text-black  font-bold ">$</p>
+              <p className="text-xs text-gray-700">12000</p>
+            </span>
           </div>
         </div>
-        {/* If weather is not undefined display results from API */}
-        {typeof weather.main !== "undefined" ? (
-          <div className=" font-bold text-center drop-shadow-md text-purple-900 bg-white">
-            {/* Location  */}
-            <p>{weather.name}</p>
-
-            {/* Temperature Celsius  */}
-            <p>{weather.main.temp}°C</p>
-
-            {/* Condition (Sunny ) */}
-            <p>{weather.weather[0].main}</p>
-            <p>({weather.weather[0].description})</p>
-          </div>
-        ) : (
-          ""
-        )}
       </div>
+      <div className="grid grid-cols-2 border rounded-lg p-2"></div>
 
       <div className="grid grid-cols-3 p-8 shadow shadow-gray-600">
         <div className="grid col-span-2 shadow-md">
@@ -215,10 +179,10 @@ const Dash = () => {
           <Barchar />
         </div>
         <div className="shadow-md">
-          <Table/>
+          <Table />
         </div>
       </div>
-      <div className="bg-green-200"></div>
+      copyright 
     </div>
   );
 };

@@ -6,18 +6,8 @@ import EmployeeSearch from "../components/EmployeeSearch";
 import AddEmployee from "./Employee/AddEmployee";
 
 const Employee = (props) => {
-  const [showForm, setShowForm] = React.useState(false);
   const [myModal, setMyModal] = React.useState(false);
   const handleOnClose = () => setMyModal(false);
-
-  const handleAddEmployeeClick = () => {
-    setShowForm(!showForm);
-  };
-
-  const handleAddEmployee = (newEmployee) => {
-    console.log("New employee added:", newEmployee);
-    setShowForm(false);
-  };
 
   return (
     <div className="flex flex-row">

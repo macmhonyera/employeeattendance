@@ -9,7 +9,7 @@ import {RiBuilding4Fill} from "react-icons/ri"
 
 const Sidebar = () => {
   return (
-    <div className="sticky top-0 left-0 h-screen w-full flex flex-col bg-[#ad4577] shadow-lg">
+    <div className="sticky top-0 left-0 h-screen w-full flex flex-col bg-[#ef7035] shadow-lg">
       <div className="p-3 pl-5 bg-slate-50">
         <Logo />
       </div>
@@ -19,7 +19,7 @@ const Sidebar = () => {
           <ul className="space-y-5 text-white ml-3">
             <li>
               <NavLink
-                to="/"
+                to="/dashboard"
                 className={({ isActive }) =>
                   isActive
                     ? "flex items-center p-2 text-base font-medium rounded-lg text-white bg-[#002046]"
@@ -31,7 +31,7 @@ const Sidebar = () => {
             </li>
             <li>
               <NavLink
-                to="/employee"
+                to="/inventory"
                 className={({ isActive }) =>
                   isActive
                     ? "flex items-center p-2 text-base font-medium rounded-lg text-white bg-[#002046]"
@@ -43,7 +43,7 @@ const Sidebar = () => {
             </li>
             <li>
               <NavLink
-                to="/department"
+                to="/issued"
                 className={({ isActive }) =>
                   isActive
                     ? "flex items-center p-2 text-base font-medium rounded-lg text-white bg-[#002046]"
@@ -55,7 +55,7 @@ const Sidebar = () => {
             </li>
             <li>
               <NavLink
-                to="/attendance"
+                to="/received"
                 className={({ isActive }) =>
                   isActive
                     ? "flex items-center p-2 text-base font-medium rounded-lg text-white bg-[#002046]"
@@ -67,7 +67,7 @@ const Sidebar = () => {
             </li>
             <li>
               <NavLink
-                to="/leave"
+                to="/supplier"
                 className={({ isActive }) =>
                   isActive
                     ? "flex items-center p-2 text-base font-medium rounded-lg text-white bg-[#002046]"
@@ -79,7 +79,7 @@ const Sidebar = () => {
             </li>
             <li>
               <NavLink
-                to="/holiday"
+                to="/returns"
                 className={({ isActive }) =>
                   isActive
                     ? "flex items-center p-2 text-base font-medium rounded-lg text-white bg-[#002046]"
@@ -91,7 +91,7 @@ const Sidebar = () => {
             </li>
             <li>
               <NavLink
-                to="/daily"
+                to="/expired"
                 className={({ isActive }) =>
                   isActive
                     ? "flex items-center p-2 text-base font-medium rounded-lg text-white bg-[#002046]"

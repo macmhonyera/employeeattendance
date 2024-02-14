@@ -1,6 +1,8 @@
 import React from "react";
 import Sidebar from "../layout/auth/Sidebar";
 import TopNav from "../layout/auth/TopNav";
+import EmployeeSearch from "../components/EmployeeSearch";
+import ExpiredProducts from "../components/ExpiredProducts";
 
 const Daily = () => {
   return (
@@ -9,7 +11,11 @@ const Daily = () => {
         <Sidebar />
       </div>
       <div className="w-full flex flex-col">
-        <TopNav title="Returned Stock" />
+        <TopNav title="Issued Stock" />
+
+        <EmployeeSearch />
+        
+        <ExpiredProducts />
       </div>
     </div>
   );

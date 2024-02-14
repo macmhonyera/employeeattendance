@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductModal = ({ visible, onClose }) => {
+const IssueStock = ({ visible, onClose }) => {
   const handleOnClose = (e) => {
     if (e.target.id === "container") onClose();
   };
@@ -28,7 +28,7 @@ const ProductModal = ({ visible, onClose }) => {
                 </button>
               </div>
             </div>
-            <h1 className="text-center p-2 font-bold mb-6">Add Products</h1>
+            <h1 className="text-center p-2 font-bold mb-6">Issued</h1>
             <div className=" space-y-3">
               <input
                 type="text"
@@ -42,12 +42,19 @@ const ProductModal = ({ visible, onClose }) => {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 "
                 placeholder="Product Name"
               />
-              <input
-                type="text"
-                name="product category"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 "
-                placeholder="Category"
-              />
+              <div>
+                <select
+                  id="designation"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 "
+                >
+                  <option selected className="text-gray-300">
+                    Category
+                  </option>
+                  <option value="">Fruit and Veg</option>
+                  <option value="">Dry Stock</option>
+                  <option value="">Frozen Stock</option>
+                </select>
+              </div>
               <input
                 type="text"
                 name="quantity"
@@ -64,7 +71,7 @@ const ProductModal = ({ visible, onClose }) => {
                 type="text"
                 name="quantity"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 "
-                placeholder="Supplier"
+                placeholder="Issued To"
               />
               <input
                 type="text"
@@ -77,7 +84,7 @@ const ProductModal = ({ visible, onClose }) => {
                   type="submit"
                   className="w-[100%] flex justify-end mt-10 text-white bg-[#15244d] hover:bg-[#0a215f] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center"
                 >
-                  Save
+                  Issue
                 </button>
               </div>
             </div>
@@ -87,5 +94,4 @@ const ProductModal = ({ visible, onClose }) => {
     </div>
   );
 };
-
-export default ProductModal;
+export default IssueStock;

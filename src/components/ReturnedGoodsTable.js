@@ -1,6 +1,6 @@
 import React from "react";
 
-const EmployeeData = () => {
+const ReturnedGoodsTable = () => {
   return (
     <>
       <table class="w-full text-sm text-left text-gray-900 mt-4">
@@ -16,19 +16,13 @@ const EmployeeData = () => {
               Product Name
             </th>
             <th scope="col" class="py-3 px-9">
-              Description
-            </th>
-            <th scope="col" class="py-3 px-9">
               Quantity
             </th>
             <th scope="col" class="py-3 px-9">
               Category
             </th>
             <th scope="col" class="py-3 px-9">
-              Received Date
-            </th>
-            <th scope="col" class="py-3 px-9">
-              Status
+              Reason
             </th>
             <th scope="col" class="py-3 px-9">
               Cost Price
@@ -43,12 +37,10 @@ const EmployeeData = () => {
           <tr className="bg-white border-b items-center dark:border-gray-700 hover:bg-primary dark:hover:bg-gray-600">
             <td className="py-3 px-9">1</td>
             <td className="py-3 px-9">A0001</td>
-            <td className="py-3 px-9">Mariana Rice</td>
-            <td className="py-3 px-9">2kg X 10</td>
+            <td className="py-3 px-9">Mariana Rice 2kg</td>
             <td className="py-3 px-9">50</td>
             <td className="py-3 px-9">Dry Stock</td>
-            <td className="py-3 px-9">10/02/2024</td>
-            <td className="py-3 px-9">In Stock</td>
+            <td className="py-3 px-9">Extra</td>
             <td className="py-3 px-9">19.50</td>
             <td className="py-3 px-9">450</td>
           </tr>
@@ -58,4 +50,4 @@ const EmployeeData = () => {
   );
 };
 
-export default EmployeeData;
+export default ReturnedGoodsTable;
