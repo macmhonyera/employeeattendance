@@ -1,11 +1,11 @@
 import React from "react";
-import Sidebar from "../layout/auth/Sidebar";
-import TopNav from "../layout/auth/TopNav";
-import EmployeeSearch from "../components/EmployeeSearch";
-import SuppliersModal from "./Suppliers/SuppliersModal";
-import SuppliersTable from "../components/SuppliersTable";
+import Sidebar from "../../layout/auth/Sidebar";
+import TopNav from "../../layout/auth/TopNav";
+import SuppliersModal from "./SuppliersModal";
+import SuppliersTable from "../../components/SuppliersTable";
+import ProductSearch from "../../components/ProductSearch";
 
-const Leave = () => {
+const Supplier = () => {
   const [myModal, setMyModal] = React.useState(false);
   const handleOnClose = () => setMyModal(false);
 
@@ -17,7 +17,7 @@ const Leave = () => {
       <div className="w-full flex flex-col">
         <TopNav title="Issued Stock" />
 
-        <EmployeeSearch />
+        <ProductSearch />
         <div className="flex mr-6 justify-end">
           <button
             className="rounded  border-fuchsia-800 shadow text-white bg-[#17486f] font-bold p-2"
@@ -34,4 +34,4 @@ const Leave = () => {
   );
 };
 
-export default Leave;
+export default Supplier;

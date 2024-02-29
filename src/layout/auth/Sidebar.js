@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../components/Logo";
 import { RxDashboard } from "react-icons/rx";
-import {MdOutlinePeopleAlt, MdEventAvailable, MdOutlineHolidayVillage, MdOutlineLogout} from "react-icons/md";
+import {MdOutlinePeopleAlt, MdOutlineHolidayVillage, MdOutlineLogout} from "react-icons/md";
 import {FcLeave} from "react-icons/fc";
 import {FaDailymotion} from "react-icons/fa"
 import {RiBuilding4Fill} from "react-icons/ri"
@@ -10,8 +10,8 @@ import {RiBuilding4Fill} from "react-icons/ri"
 const Sidebar = () => {
   return (
     <div className="sticky top-0 left-0 h-screen w-full flex flex-col bg-[#ef7035] shadow-lg">
-      <div className="p-3 pl-5 bg-slate-50">
-        <Logo />
+      <div className="p-3 pl-5 bg-slate-900">
+        <Logo/>
       </div>
       <hr className="shadow"></hr>
       <div className="overflow-y-auto py-2 px-3 mt-2">
@@ -51,18 +51,6 @@ const Sidebar = () => {
                 }
               >
                 <RiBuilding4Fill className="mr-2" /> Issued
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/received"
-                className={({ isActive }) =>
-                  isActive
-                    ? "flex items-center p-2 text-base font-medium rounded-lg text-white bg-[#002046]"
-                    : "flex items-center p-2 text-base font-medium rounded-lg"
-                }
-              >
-                <MdEventAvailable className="mr-2" /> Received
               </NavLink>
             </li>
             <li>

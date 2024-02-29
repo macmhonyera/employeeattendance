@@ -1,29 +1,35 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import "./App.css";
-import Employee from "./pages/Employee";
-import Attendance from "./pages/Attendance";
-import Leave from "./pages/Leave";
-import Holiday from "./pages/Holiday";
-import Daily from "./pages/Daily";
-import Departments from "./pages/Departments";
 import Login from "./pages/Login";
+import Product from "./pages/Product/Product";
+import Supplier from "./pages/Suppliers/Suppliers";
+import ReturnedProducts from "./pages/ReturnedStock/ReturnedProducts";
+import ExpiredStock from "./pages/Product/ExpiredStock";
+import Issue from "./pages/Issued/IssueStock";
+import { ToastProvider } from "react-toast-notifications";
 
 function App() {
   return (
     <div>
       <Router>
-        <Routes>
-          <Route exact path="/" element={<Login />} />
-          <Route exact path="/dashboard" element={<Dashboard />}></Route>
-          <Route exact path="/inventory" element={<Employee />}></Route>
-          <Route exact path="/issued" element={<Departments />}></Route>
-          <Route exact path="/received" element={<Attendance />}></Route>
-          <Route exact path="/supplier" element={<Leave />}></Route>
-          <Route exact path="/returns" element={<Holiday />}></Route>
-          <Route exact path="/expired" element={<Daily />}></Route>
-          <Route exact path="/logout" element={<Login />}></Route>
-        </Routes>
+        <ToastProvider
+          autoDismissTimeout={5000}
+          placement="top-left"
+          autoDismiss
+        >
+          <Routes>
+            <Route exact path="/" element={<Login />} />
+            <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route exact path="/inventory" element={<Product />} />
+            <Route exact path="/issued" element={<Issue />} />
+            <Route exact path="/supplier" element={<Supplier />} />
+            <Route exact path="/returns" element={<ReturnedProducts />} />
+            <Route exact path="/expired" element={<ExpiredStock />} />
+            <Route exact path="/logout" element={<Login />} />
+          </Routes>
+        </ToastProvider>
       </Router>
     </div>
   );

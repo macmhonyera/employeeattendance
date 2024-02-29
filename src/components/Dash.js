@@ -1,36 +1,43 @@
 import React from "react";
-import { HiOutlineUserGroup } from "react-icons/hi";
-import { MdAlarmOff } from "react-icons/md";
+import CountUp from "react-countup";
 import { GiFrozenArrow } from "react-icons/gi";
 import { TbWashDryDip } from "react-icons/tb";
-import { BsPersonCheck, BsPersonFillExclamation } from "react-icons/bs";
 import Barchar from "./Barchart";
-import QuickNotes from "./QuickNotes";
-import { useState } from "react";
 import Table from "./Table";
+import { useDispatch, useSelector } from "react-redux";
+import { jwtDecode } from "jwt-decode";
+import GetProductAction from "../pages/Product/ProductAction/GetProductAction";
 
-const api = {
-  key: "198238c506315ad6423d6a01f08cc1f6",
-  base: "https://api.openweathermap.org/data/2.5/",
-};
+const Dash = (props) => {
 
-const Dash = () => {
-  const [search, setSearch] = useState("");
-  const [weather, setWeather] = useState({});
+  const date =new Date();
+  const hour =date.getHours();
+  let greeting;
 
-  /*
-    Search button is pressed. Make a fetch call to the Open Weather Map API.
-  */
-  const searchPressed = () => {
-    fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
-      .then((res) => res.json())
-      .then((result) => {
-        setWeather(result);
-      });
-  };
+  if(hour<12){
+    greeting="Good Morning";
+  }else if(hour<18){
+    greeting="Good Afternoon";
+  }else{
+    greeting="Good Evening";
+  }
+
+  const dispatch=useDispatch();
+  const products = useSelector((state) => state.products);
+  console.log("he Product count is",products.products.totalItemsCount)
+
+  React.useEffect(()=>{
+    dispatch(GetProductAction());
+  },[])
+
+  const decode=jwtDecode(sessionStorage.getItem('access_token'));
 
   return (
     <div>
+       <div className="ml-4">
+        <h4 className="text-xl font-normal text-orange-600">Hello {decode.username}!! </h4>
+        <h2 className="text-2xl font-medium  mt-3 "> {greeting} </h2>
+      </div>
       <div className="grid grid-cols-4 gap-10 md:p-8 lg:p-7">
         <div className="grid grid-cols-2 gap-4 border border-gray-900 rounded-md p-3 max-h-64">
           <h1 className="text-xl font-bold text-gray-900">RECEIVED</h1>
@@ -42,7 +49,11 @@ const Dash = () => {
               </div>
               <div className="relative flex flex-col items-center">
                 <span class="ml-3">
-                  <p className="text-md text-black  font-bold ">500</p>
+                  <p className="text-md text-black  font-bold "><CountUp end={
+                  products && products.products
+                    ? products.products.totalItemsCount
+                    : ""
+                }/></p>
                   <p className="text-xs text-gray-700">Fruit and Veg</p>
                 </span>
               </div>

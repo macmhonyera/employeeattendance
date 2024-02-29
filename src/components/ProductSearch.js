@@ -1,6 +1,6 @@
 import React from "react";
 
-const EmployeeSearch = () => {
+const ProductSearch = () => {
   return (
     <div className="flex w-full justify-between">
       <div className="grid grid-cols-4 gap-4 w-full p-5">
@@ -46,4 +46,4 @@ const EmployeeSearch = () => {
   );
 };
 
-export default EmployeeSearch;
+export default ProductSearch;
